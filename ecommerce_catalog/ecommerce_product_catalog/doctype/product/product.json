@@ -39,6 +39,7 @@
    "fieldtype": "Int",
    "label": "Price",
    "non_negative": 1,
+   "read_only": 1,
    "reqd": 1
   },
   {
@@ -78,6 +79,7 @@
    "fieldtype": "Int",
    "label": "Quantity",
    "non_negative": 1,
+   "read_only": 1,
    "reqd": 1
   },
   {
@@ -96,7 +98,7 @@
  "index_web_pages_for_search": 1,
  "is_published_field": "published",
  "links": [],
- "modified": "2025-06-20 17:03:02.096818",
+ "modified": "2025-07-08 11:08:15.920566",
  "modified_by": "Administrator",
  "module": "Ecommerce Product Catalog",
  "name": "Product",

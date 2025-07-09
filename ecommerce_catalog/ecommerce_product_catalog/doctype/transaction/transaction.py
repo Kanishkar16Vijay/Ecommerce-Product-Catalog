@@ -30,7 +30,6 @@ class Transaction(Document):
                     Inventory System
                     """
 
-                    # Replace with your actual email (admin/warehouse team)
                     recipients = ["lordk1612@gmail.com"]
 
                     frappe.sendmail(

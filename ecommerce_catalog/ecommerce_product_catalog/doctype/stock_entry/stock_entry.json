@@ -12,7 +12,8 @@
   "category",
   "column_break_qydz",
   "quantity",
-  "price"
+  "price",
+  "type"
  ],
  "fields": [
   {
@@ -32,10 +33,13 @@
   {
    "fieldname": "product",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Product",
-   "options": "Product"
+   "options": "Product",
+   "reqd": 1
   },
   {
+   "fetch_from": "product.category",
    "fieldname": "category",
    "fieldtype": "Link",
    "label": "Category",
@@ -48,19 +52,28 @@
   {
    "fieldname": "quantity",
    "fieldtype": "Int",
-   "label": "Quantity"
+   "in_list_view": 1,
+   "label": "Quantity",
+   "reqd": 1
   },
   {
    "fieldname": "price",
    "fieldtype": "Int",
    "label": "Price"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "New Stock\nRestock items",
+   "reqd": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-07-04 12:12:56.966106",
+ "modified": "2025-07-08 11:20:40.201563",
  "modified_by": "Administrator",
  "module": "Ecommerce Product Catalog",
  "name": "Stock Entry",

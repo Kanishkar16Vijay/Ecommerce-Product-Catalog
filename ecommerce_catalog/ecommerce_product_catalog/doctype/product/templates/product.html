@@ -18,11 +18,5 @@
         </div>
         <p>{{description}}</p>
     </div>
-    <div><button id="create-transaction" style="margin-top: 80px; background-color: white; color: grey; border-radius: 8px; border-color:grey; ">Create Transaction</button></div>
 </div>
-<script>
-    document.getElementById('create-transaction').addEventListener('click', function () {
-        window.location.href = '/app/transactions/new?new=1&product={{ doc.name }}';
-    });
-</script>
 {% endblock %}

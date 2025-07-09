@@ -1,3 +1,12 @@
+frappe.ui.form.on('Product', {
+    refresh: function(frm) {
+        frm.add_custom_button("Go to Member List", function () {
+            const member_id = localStorage.getItem('member_id');
+            frappe.set_route('Form' , 'Members', member_id);
+        });
+    }
+});
+
 frappe.ui.form.on("Product", {
     refresh: function (frm) {
 
@@ -7,24 +16,23 @@ frappe.ui.form.on("Product", {
         if (member_id) {
             frm.add_custom_button('Add to Cart', async () => {
                 try {
-                    // 1. Fetch Member document
                     const member = await frappe.db.get_doc('Members', member_id);
 
-                    // 2. Ensure cart_items array exists
+                   
                     member.cart_items = member.cart_items || [];
 
-                    // 3. Check if product already exists in cart
+                    
                     let product_found = false;
                     for (let item of member.cart_items) {
                         if (item.product === frm.doc.name) {
                             item.quantity += 1;
-                            item.total = item.quantity * frm.doc.price; // Update total
+                            item.total = item.quantity * frm.doc.price; 
                             product_found = true;
-                            break; // found, break out of loop
+                            break; 
                         }
                     }
 
-                    // 4. If not found, add new product to cart
+                    
                     if (!product_found) {
                         member.cart_items.push({
                             product: frm.doc.name,
@@ -34,7 +42,7 @@ frappe.ui.form.on("Product", {
                         });
                     }
 
-                    // 5. Save updated member document
+                    
                     await frappe.call({
                         method: 'frappe.client.save',
                         args: {
