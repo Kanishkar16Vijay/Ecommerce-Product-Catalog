@@ -137,11 +137,13 @@ has_permission = {
 # ---------------
 # Hook on document methods and events
 
-doc_events = {
-	"User": {
-		"before_save": "ecommerce_product_catalog.cart_fun.create_cart"
-	}
-}
+# doc_events = {
+# 	"*": {
+# 		"on_update": "method",
+# 		"on_cancel": "method",
+# 		"on_trash": "method"
+# 	}
+# }
 
 # Scheduled Tasks
 # ---------------

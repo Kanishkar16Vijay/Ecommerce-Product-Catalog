@@ -13,6 +13,11 @@ frappe.ui.form.on("Cart", {
                         }
                     }
                 })
+            });
+            frm.add_custom_button("Checkout Cart", () => {
+                frappe.new_doc("Transaction", {
+                    items: frm.doc.cart_items
+                })
             })
         }
 	},

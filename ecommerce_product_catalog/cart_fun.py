@@ -1,12 +1,5 @@
 import frappe
 
-def create_cart(doc, method) :
-    if not frappe.db.exists("Cart", doc.full_name):
-        cart = frappe.new_doc("Cart")
-        cart.user = doc.email
-        cart.insert()
-        frappe.msgprint("Cart for the user is created sucessfully")
-
 
 def has_permission_cart(user=None):
     if not user:
@@ -33,7 +26,7 @@ def add_item(product, price):
     for itm in cart.cart_items:
         if itm.product == product:
             itm.quantity+=1
-            itm.amount = itm.quantity * price
+            itm.amount = itm.quantity * int(price)
             break
     else :
         cart.append("cart_items", {
@@ -49,3 +42,16 @@ def clear_cart(name):
     cart = frappe.get_doc("Cart", name)
     cart.cart_items = []
     cart.save()
+
+
+def minimum_stock(product):
+    message = f'''
+        <h3>Minimum Stock Reached for {product.product_name}</h3>
+        <p>Hello Stock Manager,</p>
+        <p>Kindly please refill the {product.product_name} as soon as possible.<p>
+    '''
+    frappe.sendmail(
+        recipients=['lordk1612@gmail.com'],
+        subject="Minimum Stock Reached",
+        message=message
+    )

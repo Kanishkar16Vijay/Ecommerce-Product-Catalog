@@ -33,14 +33,14 @@
    "fieldname": "cart_items",
    "fieldtype": "Table",
    "label": "Cart Items",
-   "options": "Cart Item",
+   "options": "Items",
    "read_only": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-10-28 11:28:32.868657",
+ "modified": "2025-10-28 15:16:18.047715",
  "modified_by": "Administrator",
  "module": "Ecommerce Product Catalog",
  "name": "Cart",
