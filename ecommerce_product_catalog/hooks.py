@@ -119,10 +119,12 @@ app_license = "mit"
 
 permission_query_conditions = {
 	"Cart": "ecommerce_product_catalog.cart_fun.has_permission_cart",
+	"Transaction": "ecommerce_product_catalog.cart_fun.has_permission_transaction",
 }
 #
 has_permission = {
 	"Cart": "ecommerce_product_catalog.cart_fun.has_permission",
+	"Transaction": "ecommerce_product_catalog.cart_fun.has_permission",
 }
 
 # DocType Class
@@ -241,4 +243,3 @@ has_permission = {
 # default_log_clearing_doctypes = {
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
-
