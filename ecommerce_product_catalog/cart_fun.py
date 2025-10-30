@@ -13,7 +13,7 @@ def has_permission_cart(user=None):
 def has_permission_transaction(user=None):
 	if not user:
 		user = frappe.session.user
-	if "System Manager" in frappe.get_roles(user):
+	if "Stock Manager" in frappe.get_roles(user):
 		return ""
 
 	return f"`tabTransaction`.`user` = '{user}'"
@@ -23,7 +23,7 @@ def has_permission(doc, user=None):
 	if not user:
 		user = frappe.session.user
 	if "Stock Manager" in frappe.get_roles(user):
-		return ""
+		return True
 
 	return doc.user == user
 
@@ -56,3 +56,15 @@ def minimum_stock(product):
         <p>Kindly please refill the {product.product_name} as soon as possible.<p>
     """
 	frappe.sendmail(recipients=["lordk1612@gmail.com"], subject="Minimum Stock Reached", message=message)
+
+	frappe.get_doc(
+		{
+			"doctype": "Notification Log",
+			"subject": f"Minimum Stock Alert for {product.product_name}",
+			"email_content": message,
+			"for_user": "stockmanager@example.com",
+			"type": "Alert",  # Info, Alert, or Warning
+			"document_type": "Product",
+			"document_name": product.name,
+		}
+	).insert(ignore_permissions=True)

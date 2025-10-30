@@ -1,0 +1,35 @@
+{
+ "chart_name": "Highest Selling Product",
+ "chart_type": "Report",
+ "creation": "2025-10-29 15:44:40.031157",
+ "currency": "",
+ "docstatus": 0,
+ "doctype": "Dashboard Chart",
+ "dynamic_filters_json": "{}",
+ "filters_json": "{}",
+ "group_by_type": "Count",
+ "idx": 0,
+ "is_public": 1,
+ "is_standard": 1,
+ "modified": "2025-10-29 15:44:40.031157",
+ "modified_by": "Administrator",
+ "module": "Ecommerce Product Catalog",
+ "name": "Highest Selling Product",
+ "number_of_groups": 0,
+ "owner": "Administrator",
+ "report_name": "Highest Selling Product",
+ "roles": [],
+ "show_values_over_chart": 0,
+ "time_interval": "Yearly",
+ "timeseries": 0,
+ "timespan": "Last Year",
+ "type": "Bar",
+ "use_report_chart": 0,
+ "x_field": "product",
+ "y_axis": [
+  {
+   "color": "#ED6396",
+   "y_field": "quantity"
+  }
+ ]
+}

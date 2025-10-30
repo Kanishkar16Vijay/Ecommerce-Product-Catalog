@@ -22,7 +22,7 @@ frappe.ui.form.on("Product", {
 							frappe.set_route("Form", "Cart", r.message.full_name);
 						} else {
 							frappe.msgprint(
-								`Their is no cart for ${r.message.full_name}, Please create the cart`
+								`There is no cart for ${r.message.full_name}, Please create the cart`
 							);
 						}
 					});

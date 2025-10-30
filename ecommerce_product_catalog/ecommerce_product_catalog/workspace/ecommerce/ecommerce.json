@@ -1,0 +1,83 @@
+{
+ "charts": [
+  {
+   "chart_name": "Highest Selling Product",
+   "label": "Highest Selling Product"
+  },
+  {
+   "chart_name": "Stock Level",
+   "label": "Stock Level"
+  },
+  {
+   "chart_name": "Low Stock",
+   "label": "Low Stock"
+  }
+ ],
+ "content": "[{\"id\":\"Z3xWTOffBH\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Ecommerce</span>\",\"col\":12}},{\"id\":\"-QVPmNMDOo\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Category\",\"col\":3}},{\"id\":\"LFTOpLjnGI\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"rL5xpHRMIn\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Product\",\"col\":3}},{\"id\":\"gWwfjbT2k6\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Cart\",\"col\":3}},{\"id\":\"lPNdL-Rsdc\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"POgk11O-5a\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Stock Entry\",\"col\":3}},{\"id\":\"GFD3IzaDm7\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"Ti-PRoWylG\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Transaction\",\"col\":3}},{\"id\":\"11VbB-dI-h\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"QfZZPDjP-u\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Highest Selling Product\",\"col\":6}},{\"id\":\"_c7LyizG10\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Low Stock\",\"col\":6}},{\"id\":\"Vvt4_e2Cxi\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Stock Level\",\"col\":12}}]",
+ "creation": "2025-10-29 13:47:44.432085",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "retail",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Ecommerce",
+ "links": [],
+ "modified": "2025-10-30 16:25:41.646566",
+ "modified_by": "Administrator",
+ "module": "Ecommerce Product Catalog",
+ "name": "Ecommerce",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 28.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Cart",
+   "link_to": "Cart",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Category",
+   "link_to": "Category",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Stock Entry",
+   "link_to": "Stock Entry",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Product",
+   "link_to": "Product",
+   "stats_filter": "[[\"Product\",\"quantity\",\">\",0,false]]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Transaction",
+   "link_to": "Transaction",
+   "stats_filter": "[]",
+   "type": "DocType"
+  }
+ ],
+ "title": "Ecommerce"
+}

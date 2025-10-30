@@ -4,9 +4,7 @@ frappe.ui.form.on("Stock Entry", {
 	// },
 	product: function (frm) {
 		frappe.db.get_value("Product", frm.doc.product, "price").then((r) => {
-			if (r.message.price === 0) {
-				frm.set_df_property("price", "reqd", 1);
-			}
+			frm.set_df_property("price", "reqd", r.message.price === 0);
 		});
 	},
 });
